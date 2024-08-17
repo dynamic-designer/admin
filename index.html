@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dwellers Delight</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/dataTables.min.css" rel="stylesheet" />
+    <link href="assets/css/phosphor-icons.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet" />
+
+    <link href="assets/css/admin.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <main class="theme-layout">
+        <!-- **************** SIDEBAR START **************** -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-section">
+                    <div class="sidebar-logo p-3 mb-4">
+                        <a href="javascript:void(0);">
+                            <img class="sidebar-logo-icon"
+                                src="assets/images/logos/Dwellers_Delight_Livinng_LTD__Logo--white.png" />
+                        </a>
+                    </div>
+                </div>
+                <div class="sidebar-section">
+                    <ul class="nav nav-sidebar" data-nav-type="accordion">
+                        <li class="nav-item-header">
+                            <span>Manage Property</span>
+                        </li>
+                        <li class="nav-item nav-item-submenu nav-item-open">
+                            <a href="#" class="nav-link active">
+                                <i class="ph ph-user-circle-gear"></i>
+                                <span>My Property</span>
+                            </a>
+                            <ul class="nav-group-sub collapse show">
+                                <li class="nav-item"><a href="javascript:void(0);" class="nav-link active">My Property List</a>
+                                </li>
+                                <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Add New Property</a>
+                                </li>
+                                <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Manage My
+                                        Property</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link">
+                                <i class="ph ph-notepad"></i>
+                                <span>Inquiry Details</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link">
+                                <i class="ph ph-calendar-dots"></i>
+                                <span>Booking Details</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link">
+                                <i class="ph ph-invoice"></i>
+                                <span>Payment History</span>
+                            </a>
+                        </li>
+                        <li class="nav-item-header">
+                            <span>Configuration</span>
+                        </li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">
+                                <i class="ph ph-user-circle-gear"></i>
+                                <span>Profile Management</span>
+                            </a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="javascript:void(0);" class="nav-link">My
+                                        profile</a></li>
+                                <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Security</a></li>
+                                <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Notification</a>
+                                </li>
+                                <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Payment
+                                        details</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item-header">
+                            <span>For Development Team</span>
+                        </li>
+                        <li class="nav-item">
+                            <a href="form-controls.html" class="nav-link">
+                                <i class="ph ph-dev-to-logo"></i>
+                                <span>Form Controls</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <!-- **************** SIDEBAR END   **************** -->
+        <section class="content-wrapper">
+            <!-- **************** HEADER START **************** -->
+            <header class="navbar">
+                <div class="container-fluid">
+                    <div class="navbar-search">
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                <i class="ph ph-magnifying-glass"></i>
+                            </div>
+                            <div class="dropdown-menu w-100" data-color-theme="light">
+                                <button type="button" class="dropdown-item">
+                                    <div class="text-center w-32px me-3">
+                                        <i class="ph ph-magnifying-glass"></i>
+                                    </div>
+                                    <span>Search
+                                        <span class="fw-bold">"in"</span>
+                                        everywhere</span>
+                                </button>
+
+                                <div class="dropdown-divider"></div>
+
+                                <div class="dropdown-menu-scrollable-lg">
+                                    <div class="dropdown-header">
+                                        Contacts
+                                        <a href="#" class="float-end">
+                                            See all
+                                            <i class="ph ph-arrow-circle-right ms-1"></i>
+                                        </a>
+                                    </div>
+
+                                    <div class="dropdown-item cursor-pointer">
+                                        <div class="me-3">
+                                            <img src="../../../assets/images/demo/users/face3.jpg"
+                                                class="w-32px h-32px rounded-pill" alt="" />
+                                        </div>
+
+                                        <div class="d-flex flex-column flex-grow-1">
+                                            <div class="fw-semibold">
+                                                Christ<mark>in</mark>e Johnson
+                                            </div>
+                                            <span class="fs-sm text-muted">c.johnson@awesomecorp.com</span>
+                                        </div>
+
+                                        <div class="d-inline-flex">
+                                            <a href="#" class="text-body ms-2">
+                                                <i class="ph ph-user-circle"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdown-item cursor-pointer">
+                                        <div class="me-3">
+                                            <img src="../../../assets/images/demo/users/face24.jpg"
+                                                class="w-32px h-32px rounded-pill" alt="" />
+                                        </div>
+
+                                        <div class="d-flex flex-column flex-grow-1">
+                                            <div class="fw-semibold">
+                                                Cl<mark>in</mark>ton Sparks
+                                            </div>
+                                            <span class="fs-sm text-muted">c.sparks@awesomecorp.com</span>
+                                        </div>
+
+                                        <div class="d-inline-flex">
+                                            <a href="#" class="text-body ms-2">
+                                                <i class="ph ph-user-circle"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdown-divider"></div>
+
+                                    <div class="dropdown-header">
+                                        Clients
+                                        <a href="#" class="float-end">
+                                            See all
+                                            <i class="ph ph-arrow-circle-right ms-1"></i>
+                                        </a>
+                                    </div>
+
+                                    <div class="dropdown-item cursor-pointer">
+                                        <div class="me-3">
+                                            <img src="../../../assets/images/brands/adobe.svg"
+                                                class="w-32px h-32px rounded-pill" alt="" />
+                                        </div>
+
+                                        <div class="d-flex flex-column flex-grow-1">
+                                            <div class="fw-semibold">
+                                                Adobe <mark>In</mark>c.
+                                            </div>
+                                            <span class="fs-sm text-muted">Enterprise license</span>
+                                        </div>
+
+                                        <div class="d-inline-flex">
+                                            <a href="#" class="text-body ms-2">
+                                                <i class="ph ph-briefcase"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdown-item cursor-pointer">
+                                        <div class="me-3">
+                                            <img src="../../../assets/images/brands/holiday-inn.svg"
+                                                class="w-32px h-32px rounded-pill" alt="" />
+                                        </div>
+
+                                        <div class="d-flex flex-column flex-grow-1">
+                                            <div class="fw-semibold">
+                                                Holiday-<mark>In</mark>n
+                                            </div>
+                                            <span class="fs-sm text-muted">On-premise license</span>
+                                        </div>
+
+                                        <div class="d-inline-flex">
+                                            <a href="#" class="text-body ms-2">
+                                                <i class="ph ph-briefcase"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdown-item cursor-pointer">
+                                        <div class="me-3">
+                                            <img src="../../../assets/images/brands/ing.svg"
+                                                class="w-32px h-32px rounded-pill" alt="" />
+                                        </div>
+
+                                        <div class="d-flex flex-column flex-grow-1">
+                                            <div class="fw-semibold">
+                                                <mark>IN</mark>G Group
+                                            </div>
+                                            <span class="fs-sm text-muted">Perpetual license</span>
+                                        </div>
+
+                                        <div class="d-inline-flex">
+                                            <a href="#" class="text-body ms-2">
+                                                <i class="ph ph-briefcase"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Search" data-bs-toggle="dropdown" />
+                            <div class="input-group-text">
+                                <a href="#"
+                                    class="navbar-nav-link align-items-center justify-content-center w-40px h-32px rounded-pill position-absolute end-0 top-50 translate-middle-y p-0 me-1"
+                                    data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                    <i class="ph ph-faders-horizontal"></i>
+                                </a>
+
+                                <div class="dropdown-menu w-100 p-3">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <h6 class="mb-0">Search options</h6>
+                                        <a href="#" class="text-body rounded-pill ms-auto">
+                                            <i class="ph ph-clock-counter-clockwise"></i>
+                                        </a>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="d-block form-label">Category</label>
+                                        <label class="form-check form-check-inline">
+                                            <input type="checkbox" class="form-check-input" checked="" />
+                                            <span class="form-check-label">Invoices</span>
+                                        </label>
+                                        <label class="form-check form-check-inline">
+                                            <input type="checkbox" class="form-check-input" />
+                                            <span class="form-check-label">Files</span>
+                                        </label>
+                                        <label class="form-check form-check-inline">
+                                            <input type="checkbox" class="form-check-input" />
+                                            <span class="form-check-label">Users</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Addition</label>
+                                        <div class="input-group">
+                                            <select class="form-select w-auto flex-grow-0">
+                                                <option value="1" selected="">
+                                                    has
+                                                </option>
+                                                <option value="2">has not</option>
+                                            </select>
+                                            <input type="text" class="form-control" placeholder="Enter the word(s)" />
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Status</label>
+                                        <div class="input-group">
+                                            <select class="form-select w-auto flex-grow-0">
+                                                <option value="1" selected="">
+                                                    is
+                                                </option>
+                                                <option value="2">is not</option>
+                                            </select>
+                                            <select class="form-select">
+                                                <option value="1" selected="">
+                                                    Active
+                                                </option>
+                                                <option value="2">Inactive</option>
+                                                <option value="3">New</option>
+                                                <option value="4">Expired</option>
+                                                <option value="5">Pending</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-light">
+                                            Reset
+                                        </button>
+
+                                        <div class="ms-auto">
+                                            <button type="button" class="btn btn-light">
+                                                Cancel
+                                            </button>
+                                            <button type="button" class="btn btn-primary ms-2">
+                                                Apply
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#"
+                                class="navbar-nav-link navbar-nav-link-icon rounded-pill position-relative hasNotification"
+                                data-bs-toggle="offcanvas" data-bs-target="#notifications">
+                                <i class="ph ph-bell"></i>
+                                <span
+                                    class="position-absolute top-0 end-0 p-2 bg-danger border border-light rounded-circle hasNotification__badge">
+                                    <span class="visually-hidden">New alerts</span>
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a href="#" class="navbar-nav-link d-flex align-items-center rounded-pill loggedInUser"
+                                data-bs-toggle="dropdown">
+                                <img src="assets/images/users/face1.jpg"
+                                    class="w-44px h-44px rounded-pill loggedInUser__avatar" alt="" />
+                                <div class="d-flex flex-column mx-2 loggedInUser__info">
+                                    <span class="loggedInUser__name">Alexander Pritchard</span>
+                                    <span class="loggedInUser__role">Property Owner</span>
+                                </div>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a href="#" class="dropdown-item">
+                                    <i class="ph ph-user-circle me-2"></i> My profile
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="ph ph-currency-circle-dollar me-2"></i> My subscription
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="ph ph-shopping-cart me-2"></i> My orders
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="ph ph-envelope-open me-2"></i> My inbox
+                                    <span class="badge bg-primary rounded-pill ms-auto">26</span>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">
+                                    <i class="ph ph-gear me-2"></i> Account settings
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="ph ph-sign-out me-2"></i> Logout
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <!-- **************** HEADER END   **************** -->
+
+            <!-- **************** PAGE MAIN INNER CONTENT START **************** -->
+            <div class="content-inner">
+                <div class="page-header">
+                    <div class="page-header-content">
+                        <h4 class="page-title mb-0">
+                            <span class="parent-page">Dashboard</span>
+                            <span class="current-page">My Property List</span>
+                        </h4>
+                    </div>
+                </div>
+                <div class="page-content">
+                    <div class="card">
+                        <div class="card-header card-header--no-border-bottom">
+                            <div class="card-title">
+                                <h5 class="mb-0">Property Partner Details</h5>
+                                <h6 class="mb-0">Ensuring Seamless Property Partnership Management</h6>
+                            </div>
+                            <div class="card-action ms-auto">
+                                <a class="btn btn-outline-secondary btn-sm" data-bs-toggle="collapse"
+                                    href="#collapseExample" role="button" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    Collapse Filters
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body pb-0">
+                            <div class="collapse show form-body" id="collapseExample">
+                                <div class="row g-3">
+                                    <div class="col-md-3">
+                                        <label for="propertyType" class="form-label">Property Type</label>
+                                        <select id="inputState" class="form-select">
+                                            <option selected>Please Select Property Type</option>
+                                            <option>Luxury Hotels</option>
+                                            <option>Boutique Hotels</option>
+                                            <option>Business Hotels</option>
+                                            <option>Eco-Friendly Hotels</option>
+                                            <option>Conference and Convention Hotels</option>
+                                            <option>Private Beach Reports</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="location" class="form-label">Location</label>
+                                        <select id="inputState" class="form-select">
+                                            <option selected>Please Select Location</option>
+                                            <option>Wales, United Kingdom</option>
+                                            <option>London, United Kingdom</option>
+                                            <option>Amsterdam, Netherlands</option>
+                                            <option>Liverpool, United Kingdom</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="bookingStatus" class="form-label">Booking Status</label>
+                                        <select id="inputState" class="form-select">
+                                            <option selected>Please Select Booking Status</option>
+                                            <option>Confirmed</option>
+                                            <option>Cancelled</option>
+                                            <option>Waitlisted</option>
+                                            <option>Modified</option>
+                                            <option>Pending</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="apartmentNumber" class="form-label">Apartment Number</label>
+                                        <select id="inputState" class="form-select">
+                                            <option selected>Please Select Apartment Number</option>
+                                            <option>W1002</option>
+                                            <option>198</option>
+                                            <option>896</option>
+                                            <option>865</option>
+                                            <option>893</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row g-3 mt-0">
+                                    <div class="col-auto me-auto">
+                                        <a class="btn btn-primary" href="#" role="button">Search Property</a>
+                                        <a class="btn btn-outline-primary" href="#" role="button">Add Property</a>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a class="btn btn-danger" href="#" role="button">Data Scraping</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body-fit-content">
+                                <table id="myTable" class="table display">
+                                    <thead>
+                                        <tr>
+                                            <th>Property Type</th>
+                                            <th>Location</th>
+                                            <th>Booking Status</th>
+                                            <th>Apartment Number </th>
+                                            <th data-orderable="false"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Luxury Hotels</td>
+                                            <td>Wales, United Kingdom</td>
+                                            <td>Confirmed</td>
+                                            <td>W1002</td>
+                                            <td>
+                                                <a class="btn btn-secondary" href="#" role="button"
+                                                    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Edit</a>
+                                                <a class="btn btn-danger" href="#" role="button"
+                                                    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Delete</a>
+                                                <a class="btn btn-outline-primary" href="#" role="button"
+                                                    style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                    <i class="ph ph-dots-three-outline"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Boutique Hotels</td>
+                                            <td>London, United Kingdom</td>
+                                            <td>Cancelled</td>
+                                            <td>-</td>
+                                            <td>
+                                                <a class="btn btn-secondary" href="#" role="button"
+                                                    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Edit</a>
+                                                <a class="btn btn-danger" href="#" role="button"
+                                                    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Delete</a>
+                                                <a class="btn btn-outline-primary" href="#" role="button"
+                                                    style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                    <i class="ph ph-dots-three-outline"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Business Hotels</td>
+                                            <td>Amsterdam, Netherlands</td>
+                                            <td>Waitlisted</td>
+                                            <td>-</td>
+                                            <td>
+                                                <a class="btn btn-secondary" href="#" role="button"
+                                                    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Edit</a>
+                                                <a class="btn btn-danger" href="#" role="button"
+                                                    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Delete</a>
+                                                <a class="btn btn-outline-primary" href="#" role="button"
+                                                    style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                    <i class="ph ph-dots-three-outline"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Eco-Friendly Hotels</td>
+                                            <td>Wales, United Kingdom</td>
+                                            <td>Modified</td>
+                                            <td>896</td>
+                                            <td>
+                                                <a class="btn btn-secondary" href="#" role="button"
+                                                    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Edit</a>
+                                                <a class="btn btn-danger" href="#" role="button"
+                                                    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Delete</a>
+                                                <a class="btn btn-outline-primary" href="#" role="button"
+                                                    style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                    <i class="ph ph-dots-three-outline"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Conference and Convention Hotels</td>
+                                            <td>Wales, United Kingdom</td>
+                                            <td>Confirmed</td>
+                                            <td>101 to 120</td>
+                                            <td>
+                                                <a class="btn btn-secondary" href="#" role="button"
+                                                    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Edit</a>
+                                                <a class="btn btn-danger" href="#" role="button"
+                                                    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Delete</a>
+                                                <a class="btn btn-outline-primary" href="#" role="button"
+                                                    style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                    <i class="ph ph-dots-three-outline"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Private Beach Reports</td>
+                                            <td>Liverpool, United Kingdom</td>
+                                            <td>Confirmed</td>
+                                            <td>101 to 120</td>
+                                            <td>
+                                                <a class="btn btn-secondary" href="#" role="button"
+                                                    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Edit</a>
+                                                <a class="btn btn-danger" href="#" role="button"
+                                                    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Delete</a>
+                                                <a class="btn btn-outline-primary" href="#" role="button"
+                                                    style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                    <i class="ph ph-dots-three-outline"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- **************** PAGE MAIN INNER CONTENT END   **************** -->
+        </section>
+
+    </main>
+
+
+    <!-- **************** LOCATION CAROUSAL START **************** -->
+    <!-- **************** LOCATION CAROUSAL END   **************** -->
+
+    <!-- **************** SERVICES CARDS START **************** -->
+    <!-- **************** SERVICES CARDS END   **************** -->
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/dataTables.min.js"></script>
+    <script src="assets/js/admin.js"></script>
+    <script>
+        let table = new DataTable('#myTable', {
+            "autoWidth": false,
+            //"info": false,
+            //"stateSave": true,
+            "order": [],
+            "aaSorting": [],
+            "language": {
+                "info": '<span class="ms-3">Total Number of Record(s): <b>_TOTAL_</b></span>',
+                "infoEmpty": 'No records available',
+                "infoFiltered": '(filtered from _MAX_ total records)',
+                "lengthMenu": 'Displaying _MENU_ records on this page',
+                "zeroRecords": 'Nothing found - sorry',
+                "paginate": {
+                    "first": "<i class='ph ph-caret-double-left'></i>",
+                    "last": "<i class='ph ph-caret-double-right'></i>",
+                    "next": "<i class='ph ph-caret-right'></i>",
+                    "previous": "<i class='ph ph-caret-left'></i>"
+                },
+            },
+            "layout": {
+                "topStart": null,
+                "topEnd": {
+                    "search": {
+                        "text": '_INPUT_',
+                        "placeholder": 'Type search here'
+                    }
+                },
+                "bottomStart": "info",
+                "bottomEnd": "paging"
+            },
+            "columnDefs": [
+                {
+                    "targets": 0,
+                    "width": '30%'
+                },
+                {
+                    "targets": 1,
+                    "width": '30%'
+                },
+                {
+                    "targets": 2,
+                    "width": '20%'
+                },
+                {
+                    "targets": 3,
+                    "width": '20%'
+                },
+                {
+                    "targets": 4,
+                    "width": '200px'
+                },
+            ],
+        });
+        function applyWindowHeight() {
+            var windowHeight = $(window).outerHeight();
+            $("body").attr("style", "--window-height: " + windowHeight + "px");
+        }
+        $(document).ready(function () {
+            applyWindowHeight();
+        });
+        $(window).resize(function () {
+            applyWindowHeight();
+        })
+    </script>
+</body>
+
+</html>

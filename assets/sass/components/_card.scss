@@ -1,0 +1,49 @@
+.card {
+    background-color: $card-background-color;
+    border: 0;
+    border-radius: $card-border-radius;
+    box-shadow: $card-box-shdow;
+    .card-header {
+        background-color: $card-background-color;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        color: $color-primary;
+        display: flex;
+        align-items: center;
+        padding: 1rem 1.25rem;
+        margin-bottom: 0;
+        &:first-child {
+            border-radius: $card-border-radius $card-border-radius 0 0;
+        }
+        &.card-header--no-border-bottom {
+            border-bottom: 0 none;
+        }
+        .card-title {
+            margin-bottom: 0;
+            h5 {
+                font-size: $font-size-lg;
+                font-weight: $font-weight-semibold;
+            }
+            h6 {
+                color: $color-slategray;
+                font-size: $font-size-md;
+                font-weight: $base-font-weight;
+            }
+        }
+    }
+    .card-body  {
+        padding: 1rem 1.25rem;
+        .form-body {
+            background-color: $card-fieldset-box-background-color;
+            border: 1px solid $color-silver;
+            border-radius: $card-border-radius;
+            padding: 1.25rem;
+        }
+        .card-body-fit-content {
+            margin-left: -1.25rem;
+            margin-right: -1.25rem;
+        }
+    }
+    .card-header--no-border-bottom ~ .card-body {
+        padding-top: 0;
+    }
+}

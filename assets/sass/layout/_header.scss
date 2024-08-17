@@ -1,0 +1,54 @@
+.navbar {
+    background-color: $header-background-color;
+    border-bottom: 1px solid $color-border-primary;
+    position: relative;
+    height: $header-height;
+    padding: 0;
+
+    .nav {
+        .nav-item {
+            display: flex;
+            align-items: center;
+            margin-right: 0.5rem;
+
+            .navbar-nav-link {
+                padding: .25rem;
+
+                &.navbar-nav-link-icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0.5rem;
+                    .hasNotification__badge {
+                        opacity: 0;
+                    }
+                    &.hasNotification {
+                        .hasNotification__badge {
+                            opacity: 1;
+                        }
+                    }
+                }
+                &.show,
+                &:hover {
+                    background-color: $color-whitesmoke;
+                }
+            }
+        }
+    }
+
+    .loggedInUser {
+        .loggedInUser__info {
+            .loggedInUser__name {
+                color: $color-body-text;
+                font-size: $base-font-size;
+                font-weight: $font-weight-semibold;
+            }
+
+            .loggedInUser__role {
+                color: $color-slategray;
+                font-size: $font-size-sm;
+                font-weight: $font-weight-medium;
+            }
+        }
+    }
+}

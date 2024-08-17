@@ -1,0 +1,80 @@
+.nav-steps {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    .step-indicator {
+        background-color: $color-white;
+        border-radius: $base-stepper-border-radius;
+        box-shadow: $base-stepper-box-shadow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1px;
+        margin-bottom: 1rem;
+        width: auto;
+        transition: all 0.3s;
+        .step-indicator-box {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem;
+            .step-number {
+                background-color: $base-stepper-digit-backgrond-color;
+                color: $base-stepper-digit-color;
+                border: 1px solid $color-silver;
+                border-radius: $base-stepper-digit-size;
+                height: $base-stepper-digit-size;
+                width: $base-stepper-digit-size;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: $font-size-xl;
+                margin-right: 0.75rem;
+                transition: all 0.3s;
+            }
+            .step-description {
+                display: flex;
+                flex-direction: column;
+                .title {
+                    font-weight: $font-weight-semibold;
+                }
+                .description {
+                    font-size: $font-size-sm;
+                }
+            }
+        }
+        &.completed {
+            background-color: $success-stepper-backgrond-color;
+            box-shadow: $success-stepper-box-shadow;
+            .step-indicator-box {
+                .step-number {
+                    background-color: $success-base-stepper-digit-backgrond-color;
+                    border-color: $success-base-stepper-digit-backgrond-color;
+                    color: $success-stepper-digit-color;
+                    font-size: 0;
+                    &::after {
+                        content: "L";
+                        position: absolute;
+                        font-size: 20px;
+                        top: 4px;
+                        right: 11px;
+                        transform: scaleX(-1) rotate(-45deg);
+                    }
+                }
+            }
+        }
+        &.active,
+        &:hover:not(.completed) {
+            box-shadow: $active-stepper-box-shadow;
+            .step-indicator-box {
+                .step-number {
+                    background-color: $active-base-stepper-digit-backgrond-color;
+                    border-color: $active-base-stepper-digit-backgrond-color;
+                    color: $active-stepper-digit-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+body {
+    background-color: $color-body-background;
+    font-family: $base-font-family;
+    line-height: normal;
+}
+
+.theme-layout {
+    display: flex;
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - $sidebar-width);
+        .content-inner {
+            height: calc(var(--window-height) - $header-height);
+            .page-header {
+                padding: 1.25rem;
+            }
+            .page-content {
+                padding: 0 1.25rem;
+            }
+        }
+    }
+}

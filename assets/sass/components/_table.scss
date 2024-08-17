@@ -1,0 +1,27 @@
+.dataTable {
+    table-layout: fixed;
+    thead {
+        tr {
+            th {
+                background-color: $base-table-header-background-color;
+                border-top: 1px solid $color-silver;
+                border-bottom: 1px solid $color-silver !important;
+                color: $base-table-header-color;
+                font-weight: $font-weight-semibold;
+                padding: 0.922rem !important;
+                vertical-align: middle;
+                &:hover {
+                    outline: none !important;
+                }
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                box-shadow: none !important;
+                vertical-align: middle;
+            }
+        }
+    }
+}

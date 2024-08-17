@@ -1,0 +1,78 @@
+//
+// Custom THEME Variables
+//
+
+// Prefix for :root CSS variables and others.
+$prefix:                      dwellers- !default;
+
+
+$color-primary: #252C5A;
+
+$color-white: #fff;
+$color-whitesmoke: #F1F4F9;
+$color-lightgray: #dddddd;
+$color-silver: #cccccc;
+$color-darkgray: #aaaaaa;
+$color-gray: #888888;
+$color-slategray: #777777;
+$color-jetblack: #1a1a1a;
+$color-black: #000000;
+
+$color-body-background: $color-whitesmoke;
+$color-body-text: $color-jetblack;
+
+$color-border-primary: $color-silver;
+
+$base-icon-size: 24px;
+
+$base-font-size: 16px;
+$font-size-xl: 20px;
+$font-size-lg: 18px;
+$font-size-md: 14px;
+$font-size-sm: 12px;
+$font-size-xs: 10px;
+
+$base-font-weight: 400;
+$font-weight-bold: 700;
+$font-weight-semibold: 600;
+$font-weight-medium: 500;
+$font-weight-light: 300;
+$font-weight-extralight: 200;
+
+$base-font-family: "Inter", sans-serif;
+
+$header-background-color: $color-white;
+$header-height: 70px;
+
+$sidebar-background-color: $color-primary;
+$sidebar-width: 300px;
+
+$base-form-control-background-color: $color-white;
+$base-form-control-height: 40px;
+$base-form-control-border-radius: 0.375rem;
+$base-form-control-focus-border-color: #86b7fe;
+$base-form-control-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+$form-label-color: #666666;
+
+$base-table-header-background-color: #F1F1F1;
+$base-table-header-color: $color-black;
+
+$card-background-color: $color-white;
+$card-border-radius: 0.375rem;
+$card-box-shdow: 0 0 1px 1px rgba(0, 0, 0, 0.075),0px 1px 3px rgba(0, 0, 0, 0.125);
+$card-fieldset-box-background-color: #F9F9F9;
+
+$base-stepper-backgrond-color: $color-white;
+$success-stepper-backgrond-color: #eafff9;
+$base-stepper-border-radius: 0.375rem;
+$base-stepper-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.075),0px 1px 3px rgba(0, 0, 0, 0.125);
+$success-stepper-box-shadow: 0 0 1px 1px #428A77,0px 1px 3px rgba(0, 0, 0, 0.125);
+$active-stepper-box-shadow: 0 0 1px 1px $color-primary,0px 1px 3px rgba(0, 0, 0, 0.125);
+$base-stepper-digit-size: 36px;
+$base-stepper-digit-backgrond-color: $color-whitesmoke;
+$success-base-stepper-digit-backgrond-color: #428A77;
+$active-base-stepper-digit-backgrond-color: $color-primary;
+$base-stepper-digit-color: $color-primary;
+$success-stepper-digit-color: $color-white;
+$active-stepper-digit-color: $color-white;
+

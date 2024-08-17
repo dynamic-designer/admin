@@ -1,0 +1,16 @@
+.page-header-content {
+    .page-title {
+        display: flex;
+        color: $color-primary;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-semibold;
+        .parent-page {
+            color: rgba(37, 44, 90, 0.5);
+            &::after {
+                content: "/";
+                color: $color-primary;
+                margin: 0 0.5rem;
+            }
+        }
+    }
+}

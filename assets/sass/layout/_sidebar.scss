@@ -1,0 +1,90 @@
+.sidebar {
+    background-color: $color-primary;
+    min-height: var(--window-height);
+    width: $sidebar-width;
+    .sidebar-content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        .sidebar-section {
+            .sidebar-logo-icon {
+                max-height: 60px;
+            }
+            .nav-sidebar {
+                display: flex;
+                flex-direction: column;
+                padding-left: 0;
+                margin-bottom: 0;
+                list-style: none;
+                .nav-item-header {
+                    display: flex;
+                    align-items: center;
+                    padding: 1.25rem 1.5rem 0.688rem;
+                    span {
+                        color: rgb(255 255 255 / 30%);
+                        font-size: $font-size-sm;
+                        font-weight: $font-weight-medium;
+                        text-transform: uppercase;
+                    }
+                }
+                .nav-item {
+                    .nav-link {
+                        display: flex;
+                        align-items: center;
+                        color: $color-white;
+                        padding: 0.688rem 1.5rem;
+                        position: relative;
+                        .ph {
+                            margin-right: 1rem;
+                        }
+                        &:hover,
+                        &.active {
+                            background-color: rgba(0, 0, 0, 0.4);
+                        }
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 1px;
+                    }
+                    &.nav-item-submenu {
+                        > .nav-link {
+                            padding: 0.688rem 3rem 0.688rem 1.5rem;
+                            &::after {
+                                content: "\e13a";
+                                font-family: "Phosphor";
+                                position: absolute;
+                                right: 1rem;
+                                transition: transform ease-in-out 0.3s;
+                            }
+                        }
+                        .nav-group-sub {
+                            padding-left: 0;
+                            list-style: none;
+                            .nav-item {
+                                &:first-child {
+                                    padding-top: 0.5rem;
+                                }
+                                &:last-child {
+                                    padding-bottom: 0.5rem;
+                                }
+                                .nav-link {
+                                    font-size: $font-size-md;
+                                    color: $color-white;
+                                    padding: 0.719rem 1.5rem 0.719rem 4rem;
+                                    &:hover,
+                                    &.active {
+                                        background-color: rgba(0, 0, 0, 0.25);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.nav-item-open > .nav-link {
+                        &::after {
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
