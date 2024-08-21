@@ -8,6 +8,8 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/css/swiper-bundle.min.css" rel="stylesheet" />
     <link href="assets/css/dataTables.min.css" rel="stylesheet" />
+    <link href="assets/css/jquery.timepicker.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap-datepicker3.min.css" rel="stylesheet" />
     <link href="assets/css/phosphor-icons.css" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -468,22 +470,25 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <div class="form-body">
+                            <div class="form-body has-header">
+                                <div class="form-body-header">
+                                    Create Property
+                                </div>
                                 <div class="row g-3">
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <div class="form-floating">
                                             <input type="text" class="form-control" id="simpleText" placeholder="">
                                             <label for="simpleText">Simple Text</label>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <div class="form-floating">
                                             <input type="password" class="form-control" id="floatingPassword"
                                                 placeholder="Password">
                                             <label for="floatingPassword">Password</label>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <form class="form-floating">
                                             <input type="email" class="form-control is-invalid"
                                                 id="floatingInputInvalid" placeholder="name@example.com"
@@ -491,14 +496,14 @@
                                             <label for="floatingInputInvalid">Invalid input</label>
                                         </form>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <div class="form-floating">
                                             <input type="email" class="form-control" id="floatingInputDisabled"
                                                 placeholder="name@example.com" value="mdo@example.com" disabled>
                                             <label for="floatingInputDisabled">Disabled Control</label>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <div class="form-floating">
                                             <select class="form-select" id="floatingSelect"
                                                 aria-label="Floating label select example">
@@ -510,12 +515,37 @@
                                             <label for="floatingSelect">Works with selects</label>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
-                                        <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Leave a comment here"
-                                                id="floatingTextarea2" style="height: 100px"></textarea>
-                                            <label for="floatingTextarea2">Comments</label>
+                                </div>
+                            </div>
+                            <div class="form-body has-header">
+                                <div class="form-body-header">
+                                    Overview
+                                </div>
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <label for="" class="form-label">Time Picker</label>
+                                        <input class="form-control" type="time" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="" class="form-label">Date Picker</label>
+                                        <input class="form-control" type="date" />
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="col-md-4">
+                                        <label for="" class="form-label">jQuery Time Picker</label>
+                                        <div class="row g-3">
+                                            <div class="col">
+                                                <input class="form-control timepicker" type="text" />
+                                            </div>
+                                            <div class="col">
+                                                <input class="form-control timepicker" type="text" />
+                                            </div>
                                         </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="" class="form-label">jQuery Date Picker</label>
+                                        <input class="form-control is-datepicker input-datepicker" type="text"
+                                            data-date-format="mm/dd/yyyy" />
                                     </div>
                                 </div>
                             </div>
@@ -540,6 +570,8 @@
 
     <script src="assets/js/jquery.sumoselect.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/jquery.timepicker.min.js"></script>
+    <script src="assets/js/bootstrap-datepicker.min.js"></script>
     <script src="assets/js/admin.js"></script>
     <script>
 
@@ -549,6 +581,16 @@
             mousewheel: true,
             keyboard: true,
         });
+
+        $('.timepicker').timepicker({
+            timeFormat: 'hh:mm p',
+            interval: 60,
+            startTime: '06:00',
+            dynamic: false,
+            dropdown: true,
+            scrollbar: true
+        });
+        $('.input-datepicker').datepicker();
 
         function applyWindowHeight() {
             var windowHeight = $(window).outerHeight();

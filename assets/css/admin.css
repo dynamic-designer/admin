@@ -216,6 +216,30 @@ body {
   border: 1px solid #cccccc;
   border-radius: 0.375rem;
   padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.card .card-body .form-body:last-child {
+  margin-bottom: 0;
+}
+.card .card-body .form-body.has-header {
+  padding-top: 0;
+}
+.card .card-body .form-body.has-header .form-body-header {
+  background: linear-gradient(180deg, #fff, #F1F4F9);
+  border: 1px solid #cccccc;
+  border-top: 0 none;
+  border-bottom-left-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+  color: #252C5A;
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+  z-index: 1;
+  top: -1px;
 }
 .card .card-body .card-body-fit-content {
   margin-left: -1.25rem;
@@ -350,6 +374,68 @@ body {
 }
 .chosen-container .chosen-drop {
   border-color: #cccccc !important;
+}
+
+.is-datepicker {
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iIzAwMDAwMCIgdmlld0JveD0iMCAwIDI1NiAyNTYiPjxwYXRoIGQ9Ik0yMDgsMzJIMTg0VjI0YTgsOCwwLDAsMC0xNiwwdjhIODhWMjRhOCw4LDAsMCwwLTE2LDB2OEg0OEExNiwxNiwwLDAsMCwzMiw0OFYyMDhhMTYsMTYsMCwwLDAsMTYsMTZIMjA4YTE2LDE2LDAsMCwwLDE2LTE2VjQ4QTE2LDE2LDAsMCwwLDIwOCwzMlpNNzIsNDh2OGE4LDgsMCwwLDAsMTYsMFY0OGg4MHY4YTgsOCwwLDAsMCwxNiwwVjQ4aDI0VjgwSDQ4VjQ4Wk0yMDgsMjA4SDQ4Vjk2SDIwOFYyMDhabS02OC03NmExMiwxMiwwLDEsMS0xMi0xMkExMiwxMiwwLDAsMSwxNDAsMTMyWm00NCwwYTEyLDEyLDAsMSwxLTEyLTEyQTEyLDEyLDAsMCwxLDE4NCwxMzJaTTk2LDE3MmExMiwxMiwwLDEsMS0xMi0xMkExMiwxMiwwLDAsMSw5NiwxNzJabTQ0LDBhMTIsMTIsMCwxLDEtMTItMTJBMTIsMTIsMCwwLDEsMTQwLDE3MlptNDQsMGExMiwxMiwwLDEsMS0xMi0xMkExMiwxMiwwLDAsMSwxODQsMTcyWiI+PC9wYXRoPjwvc3ZnPg==");
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.datepicker.dropdown-menu {
+  padding: 0.5rem;
+}
+.datepicker table {
+  height: 250px;
+}
+.datepicker table thead tr th {
+  width: 34px;
+  height: 29px;
+}
+.datepicker table thead tr th.next, .datepicker table thead tr th.prev {
+  content: "";
+  color: #252C5A;
+  font-size: 0px;
+}
+.datepicker table thead tr th.next::before, .datepicker table thead tr th.prev::before {
+  color: #252C5A;
+  font-family: "Phosphor";
+  font-size: 18px;
+}
+.datepicker table thead tr th.next::before {
+  content: "\e13a";
+}
+.datepicker table thead tr th.prev::before {
+  content: "\e138";
+}
+.datepicker table thead tr .dow {
+  color: #252C5A;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 1px solid #cccccc;
+}
+.datepicker tbody tr:first-child td.day {
+  padding-top: 14px;
+  padding-bottom: 6px;
+}
+.datepicker tbody tr td.old, .datepicker tbody tr td.new {
+  color: #777777;
+  opacity: 0.5;
+  border-top: 1px solid transparent;
+  pointer-events: none;
+}
+
+.ui-timepicker-standard {
+  font-family: "Inter", sans-serif;
+}
+.ui-timepicker-standard .ui-timepicker {
+  text-align: left;
+  width: calc(100% - 20px) !important;
+}
+.ui-timepicker-standard .ui-timepicker li {
+  width: 100% !important;
 }
 
 .nav-steps {
