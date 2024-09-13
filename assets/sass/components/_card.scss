@@ -3,6 +3,7 @@
     border: 0;
     border-radius: $card-border-radius;
     box-shadow: $card-box-shdow;
+    margin-bottom: 1rem;
     .card-header {
         background-color: $card-background-color;
         border-bottom: 1px solid rgba(0, 0, 0, 0.125);
@@ -69,5 +70,8 @@
     }
     .card-header--no-border-bottom ~ .card-body {
         padding-top: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
     }
 }

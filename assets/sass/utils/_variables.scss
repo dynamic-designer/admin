@@ -7,6 +7,9 @@ $prefix:                      dwellers- !default;
 
 
 $color-primary: #252C5A;
+$color-primary-100: rgba($color: $color-primary, $alpha: 0.1);
+$color-danger: #E83D3D;
+$color-danger-200: rgba($color: $color-danger, $alpha: 0.2);
 
 $color-white: #fff;
 $color-whitesmoke: #F1F4F9;

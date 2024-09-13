@@ -8,6 +8,8 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/css/sumoselect.min.css" rel="stylesheet" />
     <link href="assets/css/chosen.min.css" rel="stylesheet" />
+    <link href="assets/css/jquery.timepicker.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap-datepicker3.min.css" rel="stylesheet" />
     <link href="assets/css/phosphor-icons.css" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -454,8 +456,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
                             <div class="card">
                                 <div class="card-header card-header--no-border-bottom">
                                     <div class="card-title">
@@ -552,6 +552,47 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="card">
+                                <div class="card-header card-header--no-border-bottom">
+                                    <div class="card-title">
+                                        <h5 class="mb-0">jQuery Time & Date Picker</h5>
+                                        <h6 class="mb-0">DateTimepicker is a form that adds the function of selecting
+                                            date and time without custom JavaScript code.
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-body">
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <label for="" class="form-label">Browser Default Time Picker</label>
+                                                <input class="form-control" type="time" />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="" class="form-label">Browser Default Date Picker</label>
+                                                <input class="form-control" type="date" />
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="col-md-6">
+                                                <label for="" class="form-label">jQuery Time Picker</label>
+                                                <div class="row g-3">
+                                                    <div class="col">
+                                                        <input class="form-control timepicker" type="text" />
+                                                    </div>
+                                                    <div class="col">
+                                                        <input class="form-control timepicker" type="text" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="" class="form-label">jQuery Date Picker</label>
+                                                <input class="form-control is-datepicker input-datepicker" type="text"
+                                                    data-date-format="mm/dd/yyyy" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -573,6 +614,8 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.sumoselect.min.js"></script>
     <script src="assets/js/chosen.jquery.min.js"></script>
+    <script src="assets/js/jquery.timepicker.min.js"></script>
+    <script src="assets/js/bootstrap-datepicker.min.js"></script>
     <script src="assets/js/admin.js"></script>
     <script>
         $(".zeroConfigSumoSelect").SumoSelect();
@@ -587,13 +630,22 @@
         });
         $(".allOptionConfigSumoSelect").SumoSelect({
             search: true,
-            //okCancelInMulti: true,
+            okCancelInMulti: true,
             closeAfterClearAll: true,
             clearAll: true,
             selectAll: true,
             searchText: 'Enter Keywords to Search...',
             placeholder: 'This is a placeholder'
         });
+        $('.timepicker').timepicker({
+            timeFormat: 'hh:mm p',
+            interval: 60,
+            startTime: '06:00',
+            dynamic: false,
+            dropdown: true,
+            scrollbar: true
+        });
+        $('.input-datepicker').datepicker();
 
         $(".zeroConfigChosen").chosen();
         var config = {

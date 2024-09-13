@@ -1,0 +1,111 @@
+.dt-container {
+    .dt-layout-row {
+        .dt-layout-start {
+            margin-left: 1.25rem;
+        }
+        .dt-layout-end {
+            margin-right: 1.25rem;
+        }
+        .dt-input {
+            outline: none;
+            &:focus {
+                border-color: #86b7fe;
+                outline: 0;
+                box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+            }
+        }
+        .dt-search {
+            .dt-input {
+                @extend .form-control;
+                &::placeholder {
+                    color: $color-silver;
+                    font-weight: $base-font-weight;
+                }
+            }
+        }
+        .dt-length {
+            .dt-input {
+                @extend .form-select;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+                background-repeat: no-repeat;
+                background-position: right .75rem center;
+                background-size: 16px 12px;
+                padding: .375rem 2.25rem .375rem .75rem;
+            }
+        }
+    }
+    .dataTable {
+        thead {
+            tr {
+                th {
+                    padding: 0.907rem 1.5rem !important;
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    padding: 0.563rem 1.5rem !important;
+                    .btn {
+                        font-size: $font-size-sm;
+                        font-weight: $font-weight-semibold;
+                        .ph {
+                            font-size: $base-font-size;
+                            line-height: ($base-font-size + 6);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .dt-paging {
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .dt-paging-button {
+                @extend nav;
+                //color: $color-jetblack;
+                height: 30px;
+                width: 30px;
+                border-radius: 30px !important;
+                padding: 0 !important;
+                .ph {
+                    font-size: 20px;
+                }
+                &.current,
+                &:hover {
+                    background: $color-primary !important;
+                    color: $color-white !important;
+                }
+                &.disabled {
+                    cursor: not-allowed;
+                    &:hover {
+                        //color: initial !important;
+                    }
+                    .ph {
+                        cursor: not-allowed;
+                    }
+                }
+                &.first,
+                &.previous,
+                &.next,
+                &.last {
+                    &:hover {
+                        color: $color-jetblack !important;
+                        background: transparent !important;
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+    &.dt-empty-footer {
+        tbody>tr:last-child>* {
+            border-color: $color-silver !important;
+        }
+    }
+}

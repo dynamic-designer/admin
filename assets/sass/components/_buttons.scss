@@ -1,0 +1,30 @@
+.btn-primary {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    &:hover {
+        background-color: $color-primary;
+        border-color: $color-primary;
+    }
+}
+.btn-outline-primary {
+    border-color: $color-primary;
+    color: $color-primary;
+    &:hover {
+        background-color: $color-primary;
+        border-color: $color-primary;
+    }
+}
+.btn-secondary {
+    background-color: $color-primary-100;
+    border-color: $color-primary;
+    color: $color-primary;
+    &:hover {
+        background-color: $color-primary;
+        border-color: $color-primary;
+    }
+}
+.btn-danger {
+    background-color: $color-danger-200;
+    border-color: $color-danger;
+    color: $color-danger;
+}
